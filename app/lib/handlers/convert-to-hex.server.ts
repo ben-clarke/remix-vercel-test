@@ -50,8 +50,13 @@ export const convertToDataBlob = (
   const team = new Team({ rawData: teamData, data });
 
   const { hex: foreignHex, errors: foreignErrors } = foreign.convertFromHumanReadable();
-  const { hex: leagueHex, errors: leagueErrors } = league.convertFromHumanReadable();
-  const { hex: teamHex, errors: teamErrors } = team.convertFromHumanReadable();
+  // const { hex: leagueHex, errors: leagueErrors } = league.convertFromHumanReadable();
+  // const { hex: teamHex, errors: teamErrors } = team.convertFromHumanReadable();
+
+  const leagueErrors = []
+  const teamErrors = []
+  const leagueHex = ""
+  const teamHex = ""
 
   const errors = [
     { errs: foreignErrors, type: "Foreign" },
